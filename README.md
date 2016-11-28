@@ -1,3 +1,3 @@
 # logo-parser
 
-Command-line parser for LOGO programming language
+Command parser for LOGO programming language
