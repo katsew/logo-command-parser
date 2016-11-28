@@ -1,0 +1,25 @@
+{
+  "name": "logo-parser",
+  "version": "0.0.0",
+  "description": "Commandline parser for LOGO programming language",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/**/*.js",
+    "test:watch": "npm test -- --watch"
+  },
+  "engines": {
+    "node": "^4.2.2"
+  },
+  "keywords": [],
+  "author": "katsew",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "jsdom": "^7.2.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
