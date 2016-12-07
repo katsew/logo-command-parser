@@ -51,7 +51,7 @@ COMMANDS
           });
         }
 		return {
-          "commands": cmd,
+          "command": cmd,
           "args": args
         };
     }

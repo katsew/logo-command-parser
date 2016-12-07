@@ -1,6 +1,6 @@
 {
   "name": "logo-command-parser",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "LOGO command parser build with PEG.js",
   "main": "index.js",
   "scripts": {
