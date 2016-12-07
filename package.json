@@ -4,6 +4,8 @@
   "description": "Commandline parser for LOGO programming language",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build",
+    "build": "pegjs -o ./index.js ./src/logo.pegjs",
     "test": "mocha ./test/**/*.js",
     "test:watch": "npm test -- --watch"
   },
