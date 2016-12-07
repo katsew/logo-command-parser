@@ -1,23 +1,20 @@
 {
-  "name": "logo-parser",
-  "version": "0.0.0",
-  "description": "Commandline parser for LOGO programming language",
+  "name": "logo-command-parser",
+  "version": "0.1.0",
+  "description": "LOGO command parser build with PEG.js",
   "main": "index.js",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "pegjs -o ./index.js ./src/logo.pegjs",
-    "test": "mocha ./test/**/*.js",
-    "test:watch": "npm test -- --watch"
+    "build": "pegjs -o ./index.js ./src/logo.pegjs"
   },
   "engines": {
     "node": "^4.2.2"
   },
-  "keywords": [],
+  "keywords": ["LOGO", "parser", "pegjs", "turtle graphics"],
   "author": "katsew",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.4.1",
-    "jsdom": "^7.2.1",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2"
   },
