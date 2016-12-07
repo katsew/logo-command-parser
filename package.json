@@ -1,0 +1,30 @@
+{
+  "name": "logo-command-parser",
+  "version": "0.1.2",
+  "description": "LOGO command parser build with PEG.js",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "pegjs -o ./index.js ./src/logo.pegjs"
+  },
+  "engines": {
+    "node": "^4.2.2"
+  },
+  "keywords": ["LOGO", "parser", "pegjs", "turtle graphics"],
+  "homepage": "https://github.com/katsew/logo-command-parser",
+  "author": {
+    "name": "katsew",
+    "email": "y.katsew@gmail.com",
+    "url": "http://katsew.github.io"
+  },
+  "repository": "katsew/logo-command-parser",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
