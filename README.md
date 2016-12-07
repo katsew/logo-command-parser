@@ -1,3 +1,4 @@
-# logo-parser
+# Command parser for LOGO programming language
 
-Command parser for LOGO programming language
+This is a LOGO command parser build with PEG.js  
+
