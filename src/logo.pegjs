@@ -46,7 +46,7 @@ FOR
             	var cloned = Object.assign({}, item);                
             	if (cloned.args && Array.isArray(cloned.args)) {
                   cloned.args = cloned.args.map(function(arg) {
-                  	return arg === ident ? i : arg;
+                  	return arg === ":"+ident ? i : arg;
                   });
                 }
                 return cloned;
@@ -87,8 +87,13 @@ PEN_COMMANDS
     }
     
 ARGS
-	= values:(integer/string) {
+	= values:(integer) {
     	return values;
+    } / VARS
+
+VARS
+	= values:(":"string) {
+    	return values.join("");
     }
 
 FD
