@@ -25,9 +25,12 @@ EXPR
         }
         return res;
     }) / (
-    	res:COMMANDS {
+    	res:MOVE_COMMANDS {
             return [res];
-        } )
+        }  / res: PEN_COMMANDS {
+            return [res];
+        }
+    )
 
 REPEAT
 	= ("RP" / "REPEAT")  _ count:integer _ "[" expr:( _ EXPR _ / "\n") +  "]" {
@@ -41,8 +44,8 @@ REPEAT
     	return results;
     }
 
-COMMANDS
-	= cmd:( FD / BK / PU / PD / RT / LT ) _ args:(ARGS _)+ {
+MOVE_COMMANDS
+	= cmd:( FD / BK / RT / LT ) _ args:(ARGS _)+ {
     	if (Array.isArray(args)) {
           args = args.reduce(function(a, b) {
           	return a.concat(b);
@@ -53,6 +56,14 @@ COMMANDS
 		return {
           "command": cmd,
           "args": args
+        };
+    }
+
+PEN_COMMANDS
+	= cmd:( PU / PD ) _ {
+		return {
+          "command": cmd,
+          "args": []
         };
     }
     
@@ -78,9 +89,6 @@ RT
 
 LT
 	= "LT" / "LEFT"
-    
-ARC
-	= "ARC"
 
 integer
 	= digits:[0-9]+ { return parseInt(digits.join(""), 10); }
